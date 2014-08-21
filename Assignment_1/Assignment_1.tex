@@ -114,21 +114,16 @@ Then
     and by induction implies 
      $ (P^n)_{j,k} = 0 $ for all $ j \neq k $, which is not allowed, so $ q_j = 0 $.
 \subsubsection{}
-    \begin{align*}
-        q_i &= \sum_{k = 1}^N P_{k,i}q_k \\
-            &= q_iP_{i,i}
-    \end{align*}
-    which implies either $ q_i = 0 $ or $ P_{i,i} = 1 $. If $ q_i =0 $ we are finished so suppose
-    $ P_{i,i} = 1 $. 
-    Note that
-    \begin{align*}
-        P_{i,j}^2 &= \sum_{k = 1}^N P_{i,k}P_{k,j} \\
-            &= P_{i,i}P_{i,j} & \circledast \\
-            &= P_{i,j}
-    \end{align*}
-    
-    $ \circledast $ because $ P $ is a stochastic matrix if $ P_{i,i} = 1 $ all other entries on that row must be  $ 0 $.
-    
-    Seeing as $ P_{i,j} = 0 $ and $ P_{i,j}^2 $ for $ i \neq j $, then this must hold for all $ P^n_{i,j} $ (by induction), which is not
-    allowed. So $ P_{i,i} \neq 1 $ and hence $ q_i = 0 $.
+  Group into communicating classes $ [i] $, $ [j] $ respectively. (There may be other communicating classes but we can neglect them) Then there is a stochastic matrix
+  $$
+    R = \left[ 
+    \begin{array}{cc}
+      \alpha & \alpha-1 \\
+      0 & 1 \\
+    \end{array}
+    \right]
+  $$
+  If $ \mathbf{w} $ is the stationary vector for $ R $ (defined above) then it is easy to see $ w_1 = 0 $.
+  The result for $ q_i $ follows as $ i \in [i] $. 
+
 \end{document}

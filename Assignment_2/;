@@ -60,11 +60,7 @@ Since we suspect that this process is Ergodic (and mixing) this question can be 
 
 \subsection{}
 Again since we suspect that this process is Ergodic we just study the evolution of one point.
-We see that with $ \theta_0 = 0.5, \nu_0 = 0.5 $ the maximum $ \nu $ acheived is $ 34.821 $ and the 945 bounces are within $ 1\%$ of this velocity over $ 10^6 $ iterations. This suggests that ball is within $ 1\%$ of its maximum post bounce speed about $ 0.945\% $ of the time.
-
-\section{}
-See code in \emph{PageRank.m} available at 
-
+We see that with $ \theta_0 = 0.5, \nu_0 = 0.5 $ the maximum $ \vu $ acheived is $ 34.821 $ and the 945 bounces are within $ 1\%$ of this velocity over $ 10^6 $ iterations. This suggests that ball is within $ 1\%$ of its maximum post bounce speed about $ 0.945\% $ of the time.
 \end{document}
 
 

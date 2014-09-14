@@ -1,5 +1,6 @@
 \documentclass{unswmaths}
 \usepackage{unswshortcuts}
+\usepackage{hyperref}
 \begin{document}
 \author{Adam J. Gray}
 \title{Assignment 2}
@@ -63,7 +64,103 @@ Again since we suspect that this process is Ergodic we just study the evolution 
 We see that with $ \theta_0 = 0.5, \nu_0 = 0.5 $ the maximum $ \nu $ acheived is $ 34.821 $ and the 945 bounces are within $ 1\%$ of this velocity over $ 10^6 $ iterations. This suggests that ball is within $ 1\%$ of its maximum post bounce speed about $ 0.945\% $ of the time.
 
 \section{}
-See code in \emph{PageRank.m} available at 
+\subsection{}
+See code in \emph{PageRank.m} available at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_2/Project_2_Code}
+
+\subsection{}
+See code in \emph{Question\_2.m} avaiable at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_2/Project_2_Code}. 
+
+The resultant vector is
+\begin{align*}    q =( 0.011785,   0.016793,   0.021465,   0.021465,   0.016961,   0.025212,   0.012925,   0.016961,\\
+   0.024609,   0.027216,   0.049475,   0.012925,   0.013788,   0.025212,   0.025212,   0.020995,\\
+   0.012925,   0.012925, 0.012925,   0.014928,   0.102503,   0.011785,   0.096000,   0.110181,   0.282829)
+\end{align*}
+\subsection{}
+See code in \emph{Question\_3.m} avaiable at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_2/Project_2_Code}. 
+
+For $ p = 0.2 $ the resultant vector is
+\begin{align*}
+    q = (   0.018888,
+   0.020777,
+   0.019809,
+   0.019809,
+   0.020140,
+   0.020622,
+   0.019136,
+   0.020140,\\
+   0.020812,
+   0.021378,
+   0.026139,
+   0.019136,
+   0.019643,
+   0.020622,
+   0.020622,
+   0.021614,\\
+   0.019136,
+   0.019136,
+   0.019136,
+   0.019891,
+   0.041430,
+   0.018888,
+   0.038194,
+   0.041595,
+   0.453310
+).
+\end{align*}
+For $ p = 0.5 $ the resultant vector is
+\begin{align*}
+    q = (   0.015794,
+   0.019742,
+   0.019707,
+   0.019707,
+   0.018845,
+   0.021730,
+   0.016410,
+   0.018845,\\
+   0.021902,
+   0.023310,
+   0.035192,
+   0.016410,
+   0.017373,
+   0.021730,
+   0.021730,
+   0.021910,\\
+   0.016410,
+   0.016410,
+   0.016410,
+   0.017989,
+   0.070430,
+   0.015794,
+   0.064402,
+   0.072763,
+   0.379055
+).
+\end{align*}
+\begin{figure}[h]
+    \includegraphics[scale=0.5]{Graph}
+    \caption{The layout of the network}
+\end{figure}
+In figure 4 we see that there are basically 3 important nodes, 21, 23 and 24. When choosing a smaller value for $ p $ less weight is given to 21 and 23 and all of it goes to 24. As we might want to keep 21 and 23 as important nodes we would select a higher value of $ p $. Say $ p = 0.85 $.
+To see a comparison of different weightings given for different values of $ p $ see figure 5.
+
+\begin{figure}[h]
+    \includegraphics[scale=0.7]{Different_ps}
+    \caption{Different weightings for different values of $ p $.}
+\end{figure}
+\clearpage
+\subsection{}
+See code in \emph{Question\_4.m} avaiable at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_2/Project_2_Code}. 
+
+The solution converges exponentially with the error at step n given by
+\begin{align*}
+    Error(n) = \exp(-0.50655n - 0.22944).
+\end{align*}
+This is true for about $ n \leq 65 $, after that the error has reached machine precision and cannot improve any further.
+See figure 6 for a plot of $ \log(Error(n)) $.
+\begin{figure}[h]
+    \includegraphics[scale=0.5]{Log_Error_n}
+    \caption{Exponential convergence to the stationary vector. Note that at about $n = 65 $ the graph flattens out. This is because the error has reached machine precision.}
+\end{figure}
 
 \end{document}
 

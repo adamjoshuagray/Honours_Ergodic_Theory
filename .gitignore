@@ -1,0 +1,10 @@
+# Temp Files #
+*.save
+*~
+*.aux
+*.log
+*.out
+*.blg
+*.bak
+.*.swp
+.*.swo

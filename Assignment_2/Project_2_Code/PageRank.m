@@ -5,8 +5,6 @@ function [q,B]  = PageRank(edges, p)
     A           =sparse(edges(:,1),edges(:,2),1);
     % make sure the dimension is right
     A(n,n)      =0;
-
-    save "adj.mat", A;
     B           = zeros(n+1);
     B(n+1,1:n)  = ones(1,n) / n;
     

@@ -10,7 +10,7 @@ function [q,B]  = PageRank(edges, p)
     
     O           = sum(A, 2);
     B(1:n,n+1)  = (O > 0)*(1-p);
-    B(1:n,n+1)  += (O == 0); 
+    B(1:n,n+1)  = B(1:n,n+1) + (O == 0); 
     for(i =1:n)
         for(j=1:n)
             if(A(i,j))

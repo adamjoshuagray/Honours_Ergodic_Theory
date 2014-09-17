@@ -1,11 +1,13 @@
 
+%The script takes a long time to run. It can take several hours to run on
+%some machines!
 
 alpha           = 0.5;
 gamma           = 6 * pi;
 T               = @(theta, nu) [mod(theta + nu, 2*pi), alpha * nu + gamma*cos(theta + nu)];
 % First calculation of the expected return time
 initial         = [2, 2];
-N               = 100000;
+N               = 1000000;
 orbit           = zeros(N,2);
 orbit(1,:)      = initial;
 for i=[2:N]
@@ -14,11 +16,11 @@ end
 mx              = max(orbit(:,2));
 high_count      = nnz(orbit(:,2) > 0.99 * mx);
 
-exp_return_t_1  = N / high_count;
+exp_return_t_1  = N / (high_count+1);
 
 %Second calculation of the expected return time
 N_b             = 1000;
-N               = 100000;
+N               = 1000000;
 initials        = zeros(N_b, 2);
 k               = 1;
 for i = linspace(-10,10, 100)
@@ -48,5 +50,3 @@ end
 %Only calculate average over sequences where there was a return time.
 return_times    = return_times(find(return_times));
 exp_return_t_2  = mean(return_times);
-
-

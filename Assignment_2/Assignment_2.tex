@@ -15,6 +15,7 @@
     T(\theta, \nu) = (\theta + \nu \mod 2\pi, \alpha\nu + \gamma \cos(\theta + \nu))
 \end{align*}
 \subsection{}
+In any neighbourhood not around $ 2n\pi $ for $ n \in \mathbb{Z} $ we have that
 \begin{align*}
     J[T](\theta, \nu) = \left( 
     \begin{array}{cc}
@@ -28,7 +29,7 @@ and so
 |J[T](\theta, \nu)| &= \alpha - \gamma\sin(\theta + \nu) + \gamma\sin(\theta + \nu) \\
     &= \alpha.
 \end{align*}
-So $ |J[T](\theta, \nu)| = 0 $ iff $ \alpha = 0 $. So since we have chosen $ \alpha > 0 $ this map is invertible everywhere by the inverse function theorem.
+So $ |J[T](\theta, \nu)| = 0 $ iff $ \alpha = 0 $. So since we have chosen $ \alpha > 0 $ this map is invertible everywhere except around at $ 2n\pi $ by the inverse function theorem.
 \subsection{}
 \begin{figure}[h]
     \includegraphics[scale=0.5]{Question_3}
@@ -38,6 +39,8 @@ So $ |J[T](\theta, \nu)| = 0 $ iff $ \alpha = 0 $. So since we have chosen $ \al
 The maximum post-bounce velocities occur near $ \theta = 0 $ ($\theta = 2\pi$). This makes sense because the piston is traveling in the opposite direction to the ball. This is happening fastest at $ \theta = 0 $ and so this results in the largest bounces. The minimum is found at $ \theta = \pi $. This also makes sense because this is when the piston is traveling in the same direction as the ball. This is happening fastest at $ \theta = \pi $ and this results in the largest slowdown in the bounce.
 
 \subsection{}
+This does not preserve Lebesque measure. To see why consider $ \Omega = [\frac{\pi}{2}, \pi] \times [1,2] $ and note that $ \mu(\Omega) = \frac{\pi}{2} $. It is clear to see, however, that $$ T^{-1}T(\Omega) \supseteq [\frac{\pi}{2},\pi] \times [1,2] \cup [\pi, \frac{3\pi}{2}] \times [1,2]$$ and thus $$ \mu(T^{-1}T(\Omega)) \geq 2 \mu(\Omega) $$ and hence this map does not preserve Lebesque measure.
+Is this a contradiction of ergodicity and mixing? No. While an ergodic map must be measure preserving, there is no requirement that it preserves the Lebesgue measure specifically. 
 \subsection{}
 \label{qn_6_ergodic}
 \begin{figure}[h]
@@ -61,8 +64,31 @@ Since we suspect that this process is Ergodic (and mixing) this question can be 
 
 \subsection{}
 Again since we suspect that this process is Ergodic we just study the evolution of one point.
-We see that with $ \theta_0 = 0.5, \nu_0 = 0.5 $ the maximum $ \nu $ acheived is $ 34.821 $ and the 945 bounces are within $ 1\%$ of this velocity over $ 10^6 $ iterations. This suggests that ball is within $ 1\%$ of its maximum post bounce speed about $ 0.945\% $ of the time.
+We see that with $ \theta_0 = 0.5, \nu_0 = 0.5 $ the maximum $ \nu $ acheived is $ 34.821 $ and the 945 bounces are within $ 1\%$ of this velocity over $ 10^6 $ iterations. This suggests that ball is within $ 1\%$ of its maximum post bounce speed about $ 0.945\% $ of the time. 
 
+The above paragraph is actually wrong. Let me explain. If we consider the distribution of $ \nu $ as shown in figure 4 we can see that by taking different orbit lengths we essentially get different values for the percentage of time that $ \nu $ is within $ 1\% $ of its observed maximum. This is because with an orbit length of say $ 10^4 $ we would get the first black line as the observed maximum whereas with $ 10^5 $ iterations we get the second black line as the observed maximum. We can easily see that the $ -1\% $ brakets of these two lines correspond to different parts of the distribution and therefore correspond to different observed percentages.
+Precisely this problem occurs in the next two questions as well..
+
+
+\begin{figure}[h]
+    \includegraphics[scale=0.5]{nu_Histogram}
+    \label{nu_Histogram}
+    \caption{A histogram of $ \nu $ taken from $ 10^6 $ iterations of $ T $ starting at $ \theta_0 = 0.5 $ and $ \nu_0 = 0.5 $ }
+\end{figure}
+
+\subsection{}
+We use two methods for calculating the expected return time. The first method is by saying $ \mathbb{E}[r] = \frac{N}{N_h + 1}$ where $ r $ is the return time, $ N $ is the number of iterations of the $ T $ map in the orbit and $ N_h $ is the number of times it falls within the region of interest. This uses the fact that we suspect $ T $ is ergodic to say that $ n$-th return times should be the same as the $ 1$-st return time.
+Using this method with $ \theta_0 = 0.5, \nu_0 = 0.5 $ and using $ 10^6 $ iterations we get that $ \mathbb{E}[ r] = 1258 $.
+
+We can also do a similar thing for an ensamble of $ 1000 $ points but only measuring the $1$-st return time (instead of every return). Doing this we get $ \mathbb{E}[r] = 1140 $. Notice that these two numbers are actually quite different. Despite the fact that we use the same orbit lengths ($10^6$) we most likely encountering this difference due to the issue outlined in the previous question.
+
+\subsection{}
+We have used the second method outlined above to produce the histogram below. We can see that this is probably an exponential distribution (as exptected) with paramter = $ 1 / 1140 $.
+\begin{figure}[h]
+    \includegraphics[scale=0.5]{Return_Histogram}
+    \label{Histogram}
+    \caption{A histogram of the first return time to the high bounce region. }
+\end{figure}
 \section{}
 \subsection{}
 See code in \emph{PageRank.m} available at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_2/Project_2_Code}
@@ -166,8 +192,8 @@ For $ p = 0.5 $ the resultant vector is
     \includegraphics[scale=0.8]{Graph}
     \caption{The layout of the network}
 \end{figure}
-In figure 4 we see that there are basically 3 important nodes, 21, 23 and 24. When choosing a smaller value for $ p $ less weight is given to 21 and 23 and all of it goes to 24. As we might want to keep 21 and 23 as important nodes we would select a higher value of $ p $. Say $ p = 0.85 $.
-To see a comparison of different weightings given for different values of $ p $ see figure 5.
+In figure 4 we see that there are basically 3 important nodes, 21, 23 and 24. When choosing a smaller value for $ p $  we see that across the first 24 nodes the distribution becomes more uniform. If we want to make sure that we keep these nodes as \emph{important} we might choose some intermediate value of $ p $. Say $ p = 0.50 $.
+To see a comparison of different weightings given for different values of $ p $ see figure 5. Note that in this figure we have included the $25$-th \emph{Google} node and because this node is connected to every other node by definition it outranks all other nodes. In some sense one should ignore the rank of the \emph{Google} node when assessing the results.
 
 \begin{figure}[h]
     \includegraphics[scale=0.7]{Different_ps}
@@ -229,7 +255,14 @@ See code in \emph{Question\_5\_b.m} avaiable at \url{https://github.com/adamjosh
 \end{figure}
 
 
-We can see from figure 7 and by comparing to figure 5, that the this second page rank method results in a more \emph{uniform} distribution or page ranks. This is because there is a \emph{lattent} connectivity between all pages introduced by the probability of just going to a random page, regardless of the links. This means that each page is \emph{one hop} away from every other page, instead of two hops in the case of the first method. As each page is more connected we would expect a more uniform page rank distribution as we have observed here.
+We can see from figure 7 and by comparing to figure 5, that the this second page rank method results in a more \emph{uniform} distribution or page ranks (we include consideration of the \emph{Google} node in this remark). This is because there is a \emph{lattent} connectivity between all pages introduced by the probability of just going to a random page, regardless of the links. This means that each page is \emph{one hop} away from every other page, instead of two hops (via the \emph{Google} node) in the case of the first method. If we discard the \emph{Google} node and renormalise in the $ p = 0.85 $ in the Page Rank vector from the first setup we can observe a perhaps better comparison between the two methods in figure 8. From we can see that these two methods are essentially equivelent if we discount the \emph{Google} node.
+
+\begin{figure}[h]
+    \includegraphics[scale=0.4]{Comparison}
+    \caption{A comparison between the first and second methods with $ p = 0.85 $ and $ \alpha = 0.85 $ respectively.}
+\end{figure}
+
+
 \subsubsection{}
 See code in \emph{Question\_5\_c.m} avaiable at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_2/Project_2_Code}. 
 
@@ -243,5 +276,5 @@ This is true for about $ n \leq 30 $, after that the error has reached machine p
     \includegraphics[scale=0.5]{Log_Error_n_2}
     \caption{Exponential convergence to the stationary vector. Note that at about $n = 30 $ the graph flattens out. This is because the error has reached machine precision.}
 \end{figure}
-It converges faster because the uniform distribution is in a \emph{1 norm} sense, \emph{closer} to $ q $ than in the first case. It also converges a bit faster because the matrix $ G $ is slightly smaller than the matrix $ Q $.
+It converges faster because the uniform distribution is in a \emph{1 norm} sense, \emph{closer} to $ q $ than in the first case (because the first case has a \emph{Google} node). It also converges a bit faster because the matrix $ G $ is slightly smaller than the matrix $ Q $.
 \end{document}

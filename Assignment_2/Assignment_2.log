@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.8.1)  17 SEP 2014 15:48
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.8.1)  17 SEP 2014 19:06
 entering extended mode
  %&-line parsing enabled.
 **Assignment_2.tex
@@ -530,99 +530,123 @@ Project _ 1 _ Code$[]\OT1/cmr/m/n/10 . Again
 <nu_Histogram.png, id=133, 660.066pt x 436.832pt>
 File: nu_Histogram.png Graphic file (type png)
  <use nu_Histogram.png>
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 88--89
+[]$\OT1/cmtt/m/n/10 https : / / github . com / adamjoshuagray / Honours _ Ergod
+ic _ Theory / tree / master /
+ []
+
 [5 <./nu_Histogram.png (PNG copy)>]
-Overfull \hbox (12.0713pt too wide) in paragraph at lines 98--99
+Overfull \hbox (10.75046pt too wide) in paragraph at lines 111--112
+[]\OT1/cmr/m/n/10 We should make clear that in search-ing for the points in the
+ re-gion $\OML/cmm/m/it/10 ^^W \OMS/cmsy/m/n/10 2 \OT1/cmr/m/n/10 [11\OML/cmm/m
+/it/10 :\OT1/cmr/m/n/10 88\OML/cmm/m/it/10 ^^Y; \OT1/cmr/m/n/10 12\OML/cmm/m/it
+/10 ^^Y\OT1/cmr/m/n/10 ]$
+ []
+
+<2d_Histogram.png, id=142, 820.666pt x 669.702pt>
+File: 2d_Histogram.png Graphic file (type png)
+ <use 2d_Histogram.png>
+Overfull \hbox (65.33199pt too wide) in paragraph at lines 114--116
+[][]
+ []
+
+
+Overfull \hbox (12.0713pt too wide) in paragraph at lines 121--122
 \OT1/cmtt/m/n/10 Honours _ Ergodic _ Theory / tree / master / Assignment _ 2 / 
 Project _ 1 _ Code$[]\OT1/cmr/m/n/10 . (Note
  []
 
-<Return_Histogram.png, id=143, 449.68pt x 337.26pt>
+<Return_Histogram.png, id=144, 449.68pt x 337.26pt>
 File: Return_Histogram.png Graphic file (type png)
  <use Return_Histogram.png>
-Overfull \hbox (34.44524pt too wide) in paragraph at lines 141--141
+[6] [7 <./2d_Histogram.png (PNG copy)>] [8 <./Return_Histogram.png (PNG copy)>]
+
+Overfull \hbox (34.44524pt too wide) in paragraph at lines 165--165
 [] 
  []
 
-[6 <./Return_Histogram.png (PNG copy)>]
-Overfull \hbox (37.22302pt too wide) in paragraph at lines 174--174
+
+Overfull \hbox (37.22302pt too wide) in paragraph at lines 198--198
 [] 
  []
 
 
-Overfull \hbox (37.22302pt too wide) in paragraph at lines 204--204
+Overfull \hbox (37.22302pt too wide) in paragraph at lines 228--228
 [] 
  []
 
-<Graph.png, id=156, 360.34625pt x 433.62pt>
+<Graph.png, id=164, 360.34625pt x 433.62pt>
 File: Graph.png Graphic file (type png)
  <use Graph.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Different_ps.png, id=157, 578.16pt x 433.62pt>
+<Different_ps.png, id=165, 578.16pt x 433.62pt>
 File: Different_ps.png Graphic file (type png)
  <use Different_ps.png>
-Overfull \hbox (59.70924pt too wide) in paragraph at lines 213--214
+Overfull \hbox (59.70924pt too wide) in paragraph at lines 237--238
 [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7] [8 <./Graph.png (PNG copy)>] [9 <./Different_ps.png (PNG copy)>]
-<Log_Error_n.png, id=174, 578.16pt x 433.62pt>
+[9
+
+] [10 <./Graph.png (PNG copy)>] [11 <./Different_ps.png (PNG copy)>]
+<Log_Error_n.png, id=184, 578.16pt x 433.62pt>
 File: Log_Error_n.png Graphic file (type png)
  <use Log_Error_n.png>
-Overfull \hbox (3.92532pt too wide) in paragraph at lines 236--237
+Overfull \hbox (3.92532pt too wide) in paragraph at lines 260--261
 \OT1/cmr/m/n/10 See code in \OT1/cmr/m/it/10 Ques-tion[]5[]b.m \OT1/cmr/m/n/10 
 avail-able at []$\OT1/cmtt/m/n/10 https : / / github . com / adamjoshuagray /
  []
 
 
-Overfull \hbox (13.15685pt too wide) in paragraph at lines 265--265
+Overfull \hbox (13.15685pt too wide) in paragraph at lines 289--289
 [] 
  []
 
-[10
+[12
 
  <./Log_Error_n.png (PNG copy)>]
-<Second_Rank.png, id=186, 892.2936pt x 476.0184pt>
+<Second_Rank.png, id=197, 892.2936pt x 476.0184pt>
 File: Second_Rank.png Graphic file (type png)
  <use Second_Rank.png>
-Overfull \hbox (11.91112pt too wide) in paragraph at lines 267--268
+Overfull \hbox (11.91112pt too wide) in paragraph at lines 291--292
 [][] 
  []
 
-<Comparison.png, id=187, 836.726pt x 504.284pt>
+<Comparison.png, id=198, 836.726pt x 504.284pt>
 File: Comparison.png Graphic file (type png)
  <use Comparison.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (3.92532pt too wide) in paragraph at lines 283--284
+Overfull \hbox (3.92532pt too wide) in paragraph at lines 307--308
 \OT1/cmr/m/n/10 See code in \OT1/cmr/m/it/10 Ques-tion[]5[]c.m \OT1/cmr/m/n/10 
 avail-able at []$\OT1/cmtt/m/n/10 https : / / github . com / adamjoshuagray /
  []
 
-[11 <./Second_Rank.png (PNG copy)>]
-<Log_Error_n_2.png, id=195, 892.2936pt x 476.0184pt>
+[13 <./Second_Rank.png (PNG copy)>]
+<Log_Error_n_2.png, id=206, 892.2936pt x 476.0184pt>
 File: Log_Error_n_2.png Graphic file (type png)
  <use Log_Error_n_2.png>
-Overfull \hbox (101.1457pt too wide) in paragraph at lines 292--293
+Overfull \hbox (101.1457pt too wide) in paragraph at lines 316--317
 [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12 <./Comparison.png (PNG copy)>] [13 <./Log_Error_n_2.png (PNG copy)>]
+[14 <./Comparison.png (PNG copy)>] [15 <./Log_Error_n_2.png (PNG copy)>]
 (./Assignment_2.aux) ) 
 Here is how much of TeX's memory you used:
- 6269 strings out of 494818
- 87835 string characters out of 1178667
- 166925 words of memory out of 3000000
- 9267 multiletter control sequences out of 15000+50000
+ 6278 strings out of 494818
+ 87971 string characters out of 1178667
+ 168956 words of memory out of 3000000
+ 9272 multiletter control sequences out of 15000+50000
  9227 words of font info for 35 fonts, out of 3000000 for 9000
  212 hyphenation exceptions out of 8191
  48i,14n,45p,698b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -641,9 +665,9 @@ xmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive
 fonts/cm/cmti12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
-Output written on Assignment_2.pdf (14 pages, 1024468 bytes).
+Output written on Assignment_2.pdf (16 pages, 1092100 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 226 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 280 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

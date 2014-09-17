@@ -7,20 +7,19 @@ gamma           = 6 * pi;
 T               = @(theta, nu) [mod(theta + nu, 2*pi), alpha * nu + gamma*cos(theta + nu)];
 % First calculation of the expected return time
 initial         = [2, 2];
-N               = 1000000;
+N               = 100000;
 orbit           = zeros(N,2);
 orbit(1,:)      = initial;
 for i=[2:N]
     orbit(i,:)  = T(orbit(i-1,1), orbit(i-1,2));
 end
-mx              = max(orbit(:,2));
-high_count      = nnz(orbit(:,2) > 0.99 * mx);
+high_count      = nnz(orbit(:,2) > 10.8 * pi);
 
 exp_return_t_1  = N / (high_count+1);
 
 %Second calculation of the expected return time
 N_b             = 1000;
-N               = 1000000;
+N               = 100000;
 initials        = zeros(N_b, 2);
 k               = 1;
 for i = linspace(-10,10, 100)
@@ -40,7 +39,7 @@ parfor i = 1:N_b
         orbit(j,:)      = T(orbit(j-1,1), orbit(j-1,2));
     end
     mx                  = max(orbit(:,2));
-    highs               = find(orbit(:,2) > 0.99 * mx);
+    highs               = find(orbit(:,2) > 10.8*pi);
     if (length(highs) >= 2)
         ret_time        = highs(2) - highs(1);
         return_times(i) = ret_time;

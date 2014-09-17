@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.8.1)  17 SEP 2014 14:40
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.8.1)  17 SEP 2014 15:48
 entering extended mode
  %&-line parsing enabled.
 **Assignment_2.tex
@@ -472,11 +472,11 @@ LaTeX Info: Redefining \pageref on input line 4.
 \openout3 = `Assignment_2.out'.
 
 \AtBeginShipoutBox=\box55
- <artwork/unswlogo.jpg, id=79, 254.96857pt x 93.37283pt>
+ <artwork/unswlogo.jpg, id=83, 254.96857pt x 93.37283pt>
 File: artwork/unswlogo.jpg Graphic file (type jpg)
 
 <use artwork/unswlogo.jpg>
-<artwork/mathslogo.jpg, id=80, 205.76875pt x 205.76875pt>
+<artwork/mathslogo.jpg, id=84, 205.76875pt x 205.76875pt>
 File: artwork/mathslogo.jpg Graphic file (type jpg)
 
 <use artwork/mathslogo.jpg> [1
@@ -493,15 +493,15 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 14.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-<Question_3.jpg, id=90, 578.16pt x 433.62pt>
+<Question_3.jpg, id=95, 578.16pt x 433.62pt>
 File: Question_3.jpg Graphic file (type jpg)
  <use Question_3.jpg>pdfTeX warning (ext4): destination with the same identifie
 r (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 
+l.42 
       [1 <./Question_3.jpg>]
-<Question_6_Ergodic.jpg, id=101, 578.16pt x 433.62pt>
+<Question_6_Ergodic.jpg, id=110, 578.16pt x 433.62pt>
 File: Question_6_Ergodic.jpg Graphic file (type jpg)
 
 <use Question_6_Ergodic.jpg>
@@ -509,122 +509,141 @@ File: Question_6_Ergodic.jpg Graphic file (type jpg)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2] [3 <./Question_6_Ergodic.jpg>]
-<Question_6_Mixing.jpg, id=114, 578.16pt x 433.62pt>
+<Question_6_Mixing.jpg, id=123, 578.16pt x 433.62pt>
 File: Question_6_Mixing.jpg Graphic file (type jpg)
 
-<use Question_6_Mixing.jpg> [4
-
- <./Question_6_Mixing.jpg>]
-<nu_Histogram.png, id=120, 660.066pt x 436.832pt>
-File: nu_Histogram.png Graphic file (type png)
- <use nu_Histogram.png>
-<Return_Histogram.png, id=121, 449.68pt x 337.26pt>
-File: Return_Histogram.png Graphic file (type png)
- <use Return_Histogram.png>
-[5 <./nu_Histogram.png (PNG copy)>]
-Overfull \hbox (34.44524pt too wide) in paragraph at lines 127--127
-[] 
+<use Question_6_Mixing.jpg>
+Overfull \hbox (10.12685pt too wide) in paragraph at lines 68--70
+\OT1/cmtt/m/n/10 Honours _ Ergodic _ Theory / tree / master / Assignment _ 2 / 
+Project _ 1 _ Code$[]\OT1/cmr/m/n/10 . Since
  []
 
 
-Overfull \hbox (37.22302pt too wide) in paragraph at lines 160--160
+Overfull \hbox (13.18243pt too wide) in paragraph at lines 73--76
+\OT1/cmtt/m/n/10 Honours _ Ergodic _ Theory / tree / master / Assignment _ 2 / 
+Project _ 1 _ Code$[]\OT1/cmr/m/n/10 . Again
+ []
+
+[4
+
+ <./Question_6_Mixing.jpg>]
+<nu_Histogram.png, id=133, 660.066pt x 436.832pt>
+File: nu_Histogram.png Graphic file (type png)
+ <use nu_Histogram.png>
+[5 <./nu_Histogram.png (PNG copy)>]
+Overfull \hbox (12.0713pt too wide) in paragraph at lines 98--99
+\OT1/cmtt/m/n/10 Honours _ Ergodic _ Theory / tree / master / Assignment _ 2 / 
+Project _ 1 _ Code$[]\OT1/cmr/m/n/10 . (Note
+ []
+
+<Return_Histogram.png, id=143, 449.68pt x 337.26pt>
+File: Return_Histogram.png Graphic file (type png)
+ <use Return_Histogram.png>
+Overfull \hbox (34.44524pt too wide) in paragraph at lines 141--141
 [] 
  []
 
 [6 <./Return_Histogram.png (PNG copy)>]
-Overfull \hbox (37.22302pt too wide) in paragraph at lines 190--190
+Overfull \hbox (37.22302pt too wide) in paragraph at lines 174--174
 [] 
  []
 
-<Graph.png, id=142, 360.34625pt x 433.62pt>
-File: Graph.png Graphic file (type png)
- <use Graph.png> [7 <./Graph.png (PNG copy)>] <Different_ps.png, id=148, 578.16
-pt x 433.62pt>
-File: Different_ps.png Graphic file (type png)
 
-<use Different_ps.png>
-Overfull \hbox (59.70924pt too wide) in paragraph at lines 199--200
+Overfull \hbox (37.22302pt too wide) in paragraph at lines 204--204
+[] 
+ []
+
+<Graph.png, id=156, 360.34625pt x 433.62pt>
+File: Graph.png Graphic file (type png)
+ <use Graph.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Different_ps.png, id=157, 578.16pt x 433.62pt>
+File: Different_ps.png Graphic file (type png)
+ <use Different_ps.png>
+Overfull \hbox (59.70924pt too wide) in paragraph at lines 213--214
 [][] 
  []
 
-[8 <./Different_ps.png (PNG copy)>]
-<Log_Error_n.png, id=155, 578.16pt x 433.62pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7] [8 <./Graph.png (PNG copy)>] [9 <./Different_ps.png (PNG copy)>]
+<Log_Error_n.png, id=174, 578.16pt x 433.62pt>
 File: Log_Error_n.png Graphic file (type png)
  <use Log_Error_n.png>
-Overfull \hbox (1.14754pt too wide) in paragraph at lines 222--223
+Overfull \hbox (3.92532pt too wide) in paragraph at lines 236--237
 \OT1/cmr/m/n/10 See code in \OT1/cmr/m/it/10 Ques-tion[]5[]b.m \OT1/cmr/m/n/10 
-ava-iable at []$\OT1/cmtt/m/n/10 https : / / github . com / adamjoshuagray /
+avail-able at []$\OT1/cmtt/m/n/10 https : / / github . com / adamjoshuagray /
  []
 
 
-Overfull \hbox (13.15685pt too wide) in paragraph at lines 251--251
+Overfull \hbox (13.15685pt too wide) in paragraph at lines 265--265
 [] 
  []
 
-[9
+[10
 
  <./Log_Error_n.png (PNG copy)>]
-<Second_Rank.png, id=167, 892.2936pt x 476.0184pt>
+<Second_Rank.png, id=186, 892.2936pt x 476.0184pt>
 File: Second_Rank.png Graphic file (type png)
  <use Second_Rank.png>
-Overfull \hbox (11.91112pt too wide) in paragraph at lines 253--254
+Overfull \hbox (11.91112pt too wide) in paragraph at lines 267--268
 [][] 
  []
 
-<Comparison.png, id=168, 836.726pt x 504.284pt>
+<Comparison.png, id=187, 836.726pt x 504.284pt>
 File: Comparison.png Graphic file (type png)
  <use Comparison.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (1.14754pt too wide) in paragraph at lines 267--268
+Overfull \hbox (3.92532pt too wide) in paragraph at lines 283--284
 \OT1/cmr/m/n/10 See code in \OT1/cmr/m/it/10 Ques-tion[]5[]c.m \OT1/cmr/m/n/10 
-ava-iable at []$\OT1/cmtt/m/n/10 https : / / github . com / adamjoshuagray /
+avail-able at []$\OT1/cmtt/m/n/10 https : / / github . com / adamjoshuagray /
  []
 
-[10 <./Second_Rank.png (PNG copy)>]
-<Log_Error_n_2.png, id=176, 892.2936pt x 476.0184pt>
+[11 <./Second_Rank.png (PNG copy)>]
+<Log_Error_n_2.png, id=195, 892.2936pt x 476.0184pt>
 File: Log_Error_n_2.png Graphic file (type png)
  <use Log_Error_n_2.png>
-Overfull \hbox (101.1457pt too wide) in paragraph at lines 276--277
+Overfull \hbox (101.1457pt too wide) in paragraph at lines 292--293
 [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <./Comparison.png (PNG copy)>] [12 <./Log_Error_n_2.png (PNG copy)>]
-(./Assignment_2.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[12 <./Comparison.png (PNG copy)>] [13 <./Log_Error_n_2.png (PNG copy)>]
+(./Assignment_2.aux) ) 
 Here is how much of TeX's memory you used:
- 6267 strings out of 494818
- 87811 string characters out of 1178667
- 164916 words of memory out of 3000000
- 9266 multiletter control sequences out of 15000+50000
+ 6269 strings out of 494818
+ 87835 string characters out of 1178667
+ 166925 words of memory out of 3000000
+ 9267 multiletter control sequences out of 15000+50000
  9227 words of font info for 35 fonts, out of 3000000 for 9000
  212 hyphenation exceptions out of 8191
- 48i,14n,45p,873b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-texlive/font
-s/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
-s/cm/cmmi5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi7.p
-fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-tex
-live/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share
-/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Assignment_2.pdf (13 pages, 1017865 bytes).
+ 48i,14n,45p,698b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-texlive/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/te
+xmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmti12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+tt10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.p
+fb>
+Output written on Assignment_2.pdf (14 pages, 1024468 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 218 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 270 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
 

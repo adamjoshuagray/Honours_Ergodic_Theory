@@ -1,4 +1,4 @@
-function [q,G]  = PageRank(edges, alpha) 
+function [q,G]  = PageRank2(edges, alpha) 
     % nodes are numbered 1,..., n
     n           =max(max(edges));
     % generate transition matrix

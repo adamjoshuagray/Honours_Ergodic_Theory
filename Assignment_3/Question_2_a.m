@@ -24,5 +24,5 @@ fh      = figure;
 for i=1:n_ics
     pause;
     hist(traj(:,i),n_bins);
-    saveas(fh, strcat(filename, num2str(i)),'png');
+    %saveas(fh, strcat(filename, num2str(i)),'png');
 end

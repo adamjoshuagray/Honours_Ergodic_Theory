@@ -22,13 +22,13 @@ C           = zeros(n_bins, n_bins);
 for i=1:(N_traj-1)
     current_bin     = floor(traj(i) * n_bins) + 1;
     next_bin        = floor(traj(i+1) * n_bins) + 1;
-    C(current_bin, next_bin) = C(current_bin, next_bin) + 1;
+    C(next_bin, current_bin) = C(next_bin,current_bin) + 1;
 end
 
 sums        = sum(C,1);
 Q           = zeros(size(C));
 for i=1:n_bins
-    Q(:,i)  = C(:,i) / sums(i);
+    Q(:,i)  = C(:,i) / n_bins;
 end
 
 
@@ -39,7 +39,7 @@ max(sum(Q))
 min(sum(Q))
 
 %We now calculate the eigenvalues and eigenvectors of Q
-[V,e]       = eig(Q);
+[V,e]       = eig(Q');
 
 %Return the first few eigenvectors and note that there is only one with
 %a value anywhere near 1. (There is one with value 1)

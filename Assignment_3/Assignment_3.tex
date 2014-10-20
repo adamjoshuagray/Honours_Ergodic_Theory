@@ -52,12 +52,36 @@
     thus for $ f_i(x) = \mathds{1}_{I_i}(x) $
     we have that
     \begin{align}
-        \mathcal{P}_T f_1(x) &= \mathds{1}_{(\frac{3}{4},1)}(x) \\
-        \mathcal{P}_T f_2(x) &= \mathds{1}_{(\frac{5}{8},\frac{3}{4})}(x) \\
-        \mathcal{P}_T f_3(x) &= \frac{1}{2}\mathds{1}_{(\frac{1}{2},\frac{5}{8})}(x) + \frac{1}{2}\mathds{1}_{(0,\frac{1}{8})}(x) \\
-        \mathcal{P}_T f_4(x) &= \frac{1}{2}\mathds{1}_{(\frac{1}{8},\frac{1}{4})}(x) + \mathds{1}_{(\frac{1}{4},\frac{1}{2})}(x) \\
+        \mathcal{P}_T f_1(x) &= \frac{1}{2}\mathds{1}_{I_3 \cup I_4}(x) = \frac{1}{2}\mathds{1}_{I_3}(x) + \frac{1}{2}\mathds{1}_{I_4}(x)\\
+        \mathcal{P}_T f_2(x) &= \mathds{1}_{I_4}(x) \\
+        \mathcal{P}_T f_3(x) &= \frac{1}{2}\mathds{1}_{I_2 \cup I_3}(x) = \frac{1}{2}\mathds{1}_{I_2}(x) + \frac{1}{2}\mathds{1}_{I_3}(x)\\
+        \mathcal{P}_T f_4(x) &= \mathds{1}_{I_1}(x)
     \end{align}
-\section{}
-\section{}
+\subsection{}
+    Let $ \mathcal{S} = \operatorname{span} \bigcup_{i=1}^4 \mathds{1}_{I_i}$.
+    
+    Let $ f \in \mathcal{S} $ then $ f = \sum_{i=1}^4 \lambda_4 \mathds{1}_{I_i} $ and so by linearity of the Perron-Frobenius operator, we have that $ \mathcal{P}_T(f) = \sum_{i=1}^4 \lambda_4 \mathcal{P}_T(\mathds{1}_{I_i}) $ but from the result above we see that $ \mathcal{P}_T(\mathds{1}_{I_i}) \in \mathcal{S} $ for each $ i $ and so $ \mathcal{P} $ preserves $ \mathcal{S} $
+\subsection{}
+    We do this by just pluging the basis of $ \mathcal{S} $ into the $ \mathcal{P}_T $ and putting the results in each row of the matrix. Seeing as we already have first part we can just write down the matrix $ M $ as
+    \begin{align}
+        M = \left[ 
+        \begin{array}{cccc}
+            0 & 0 & \frac{1}{2} & \frac{1}{2} \\
+            0 & 0 & 0 & 1 \\
+            0 & \frac{1}{2} & \frac{1}{2} & 0 \\
+            1 & 0 & 0 & 0 
+        \end{array}
+        \right]
+    \end{align}
+\subsection{}
+    Using Mathematica we can calculate the left eigenvector corresponding to eigenvalue 1 which is
+    \begin{align}
+        \mathbf{v} = (1,\frac{1}{2},1,1)
+    \end{align}
+    which corresponds to the ACIM
+    \begin{align}
+        \mathds{1}_{I_1} + \frac{1}{2}\mathds{1}_{I_2} + \mathds{1}_{I_3} + \mathds{1}_{I_4}
+    \end{align}
+    
 \section{}
 \end{document}

@@ -78,9 +78,9 @@
     \begin{align}
         \mathbf{v} = (1,\frac{1}{2},1,1)
     \end{align}
-    which corresponds to the ACIM
+    which corresponds to the ACIM (after rescaling)
     \begin{align}
-        \mathds{1}_{I_1} + \frac{1}{2}\mathds{1}_{I_2} + \mathds{1}_{I_3} + \mathds{1}_{I_4git}
+        \frac{8}{7}\left( \mathds{1}_{I_1} + \frac{1}{2}\mathds{1}_{I_2} + \mathds{1}_{I_3} + \mathds{1}_{I_4} \right)
     \end{align}
 \clearpage
 \section{}
@@ -146,4 +146,67 @@ A formal statement of that theorem along with it's proof is as follows
 \end{theorem}
 \begin{proof}
 \end{proof}
+\subsection{}
+\section{}
+\subsection{}
+For $ T : I \lra I $ defined as
+\begin{align}
+  T(x) := 
+  \begin{cases}
+    2x  & 0 \leq x \leq \frac{1}{2} \\
+    2(1-x) & \frac{1}{2} < x \leq 1
+  \end{cases}
+\end{align}
+we have the following plot:
+
+
+\includegraphics[scale=0.5]{qn_4_plot}
+
+The T invariant density may be found in much the same way as for question 1.
+If we let $ I_1 = \left[0,\frac{1}{2}\right] $ and $ I_2 = \left[ \frac{1}{2}, 1 \right] $ and choose the basis
+  $\left\{ \mathds{1}_{I_1}, \mathds{1}_{I_2} \right\} $ then the associated matrix representation of the Perron-Frobenius operator is 
+\begin{align}
+  \left[ \begin{array}{cc} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{array} \right]
+\end{align}
+which has eigenvector $ (1,1) $ associated with eigenvalue $ 1 $ and so the $ T $ invariant density is $ \mathds{1}_{[0,1]} $, in other words the density is the uniform density (1).
+
+\subsection{}
+We have to do is show that 
+\begin{align}
+  g = (f \circ h^{-1})|\left( h^{-1} \right)'|
+\end{align}
+where $ f $ is the density of the ACIM associated with $ T $.
+
+Now since $ f $ is the uniform density all we have to show is that
+\begin{align}
+ |\left( h^{-1} \right)'| = \frac{1}{\pi\sqrt{x(1-x)}}.
+\end{align}
+Now since $ h(x) = \sin^2(\frac{\pi x}{2}) $ we have that $ h^{-1}(x) = \frac{2}{\pi} \sin^{-1}(\sqrt{x}) $ and by differentiating we see that
+\begin{align}
+  \left( h^{-1}(x) \right)' = \frac{1}{\pi\sqrt{x(1-x)}}
+\end{align}
+and note that for $ x \in [0,1] $ this is positive so 
+\begin{align}
+| (h^{-1}(x))' | = \frac{1}{\pi\sqrt{x(1-x)}}
+\end{align}
+The last thing we have to show is that $ S(x) = \left( h \circ T \circ h^{-1} \right)(x) $ or equivelently $ T(x) = \left(h^{-1} \circ S \circ h \right)(x) $.
+
+See that
+\begin{align}
+  T(x) &= \frac{2}{\pi} \sin^{-1}\left( \sqrt{4\sin^2\left(\frac{\pi  x}{2}\right)\left(1-\sin^2\left(\frac{\pi  x}{2}\right)\right) } \right) \\
+    &= \frac{2}{\pi} \sin^{-1}\left( \sqrt{4\sin^2\left(\frac{\pi  x}{2}\right)\cos^2\left(\frac{\pi  x}{2}\right) } \right) \\
+    &= \frac{2}{\pi} \sin^{-1}\left( 2 \sin\left(\frac{\pi  x}{2}\right)\cos\left(\frac{\pi  x}{2}\right) \right) \\
+    &= \frac{2}{\pi} \sin^{-1}\left(  \sin\left(\pi  x\right)\right) \\
+    &= \begin{cases} 2x & 0 \leq x \leq \frac{1}{2} \\ 2(1-x)  & \frac{1}{2} < x \leq 1 \end{cases}
+\end{align}
+and so this resolves the problem in that by using the result of Section 3.
+That is, the density $ g $ is S-invariant.
+
+\subsection{}
+By using the result of question 3.3 we can calculate the  Lyapunov exponent of $ (I, \mathcal{B}, \mu_g, S) $ by just calculating the  Lyapunov exponent of $ (I, \mathcal{B}, \mu_f, T ) $. Since we have that $ f = 1 $ then we can just write
+\begin{align}
+  \int_{I} \log |T'(x)| d\mu_f(x) &= \int_{I} \log |T'(x)| d\mu \\
+    &= \int_{0}^{1} \log 2 d\mu \\
+    &= \log 2
+\end{align}
 \end{document}

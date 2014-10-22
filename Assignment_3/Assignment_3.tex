@@ -118,4 +118,32 @@ The following is a plot of all the left eigenvalues of $ Q $ in the complex plan
 It is clear to see that there is only one eigenvalue equal to 1. We have also checked this in code in \emph{Question\_2\_b\_c\_d.m} available at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_3}.
 
 The following is a plot of the left eigenvector corresponding to the eigenvalue 1.
+
+\section{}
+\subsection{}
+
+Now note that $ S = h \circ T \circ h^{-1} $ or equivelently $ T = h^{-1} \circ S \circ h $.
+
+As $ h $ and $ T $ are non-singular, so is $ S $ and thus by the composition of Perron-Frobenius operators
+we can write
+\begin{align}
+    \mathcal{P}_T f = \left( \mathcal{P}_{h^{-1}} \circ \mathcal{P}_{S} \circ \mathcal{P}_{h} \right) f
+\end{align}
+or equivelently
+\begin{align}
+    \left( \mathcal{P}_{h} \circ \mathcal{P}_T \right) f = \left( \mathcal{P}_{S} \circ \mathcal{P}_{h} \right) f..
+\end{align}
+Now as $ \mathcal{P}_h f = g $ and by assumption $ \mathcal{P}_T f = f $ then
+\begin{align}
+    \mathcal{P}_h f = \mathcal{P}_s g
+\end{align}
+but we have also shown that $ \mathcal{P}_h f = g $
+and so the result follows.
+\subsection{}
+From the lectures we know that $ \mathcal{P}_S g = g $ implies that $ g $ is an $ S $ invariant density, so the result is immediate.
+A formal statement of that theorem along with it's proof is as follows
+\begin{theorem}
+\end{theorem}
+\begin{proof}
+\end{proof}
 \end{document}

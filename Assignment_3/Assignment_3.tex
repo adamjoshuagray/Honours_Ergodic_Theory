@@ -85,6 +85,7 @@
     \end{align}
 \clearpage
 \section{}
+The map $ T $ is defined in \emph{T.m} available at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_3}.
 \subsection{}
 The following plots we produced by code in \emph{Question\_2\_a.m} available at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_3}.
 
@@ -105,7 +106,18 @@ What these historgrams show is the average time the trajectory spends in each bi
 This code is available in \emph{Question\_2\_b\_c\_d.m} available at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_3}.
 
 \subsection{}
-Show TODO
+
+Its obvious this is a stochastic matrix...
+
+Let $ r_j $ represent the $j$-th row sum.
+The 
+\begin{align}
+  r_j = \sum_{i=1}^{1000} Q_{ji} = \sum_{i=1}\frac{\#\{ p \in S_j| T(p) \in B_i \}}{1000} = 1
+\end{align}
+because $ |B_i| = 1000 $.
+
+Also we can see that each entry must be positive (from the definition $ Q_{ji} = \#\{p \in S_j | T(p) \in B_j \} $)
+so this is a stochastic matrix.
 
 Note that numerical verification is done in  \emph{Question\_2\_b\_c\_d.m} available at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_3}.
 
@@ -119,6 +131,10 @@ The following is a plot of all the left eigenvalues of $ Q $ in the complex plan
 It is clear to see that there is only one eigenvalue equal to 1. We have also checked this in code in \emph{Question\_2\_b\_c\_d.m} available at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_3}.
 
 The following is a plot of the left eigenvector corresponding to the eigenvalue 1.
+
+\includegraphics[scale=0.5]{qn_2_d_stationary}
+
+Appart from the change of scale of the axis this plot aggrees with the histograms from before.
 
 \section{}
 \subsection{}

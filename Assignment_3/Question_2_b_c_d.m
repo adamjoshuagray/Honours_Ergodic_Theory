@@ -1,44 +1,23 @@
 
 
-%Lets produce a GOOD histogram from which to run our code
-
-N_traj      = 10^8;
-%We just choose one initial condition
-ic          = 0.6;
-
-%Setup the trajectory
-traj        = zeros(N_traj, 1);
-traj(1)     = ic;
-
-%Calculate the trajectory
-for i=1:(N_traj-1)
-    traj(i+1)   = T(traj(i));
+Q           = zeros(1000,1000);
+for i=1:1000
+    B       = linspace((i-1)/1000, i/1000,1000);
+    C       = T(B);
+    for j=1:1000
+        Q(i,j) = nnz((C < j/1000) .* (C >= (j-1)/1000)) / 1000;
+    end
 end
 
-%Setup the conditional counts matrix
-n_bins      = 10^3;
-C           = zeros(n_bins, n_bins);
-
-for i=1:(N_traj-1)
-    current_bin     = floor(traj(i) * n_bins) + 1;
-    next_bin        = floor(traj(i+1) * n_bins) + 1;
-    C(next_bin, current_bin) = C(next_bin,current_bin) + 1;
-end
-
-sums        = sum(C,1);
-Q           = zeros(size(C));
-for i=1:n_bins
-    Q(:,i)  = C(:,i) / n_bins;
-end
 
 
 %We verify that Q is a stochaastic matrix
 %Both of these should evaluate to 1 (they do)
 %That means that each row sum is 1
-max(sum(Q))
-min(sum(Q))
+max(sum(Q'))
+min(sum(Q'))
 
-%We now calculate the eigenvalues and eigenvectors of Q
+%We now calculate the left eigenvalues and eigenvectors of Q
 [V,e]       = eig(Q');
 
 %Return the first few eigenvectors and note that there is only one with

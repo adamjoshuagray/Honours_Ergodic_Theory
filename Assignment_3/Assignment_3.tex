@@ -99,7 +99,7 @@ The following plots we produced by code in \emph{Question\_2\_a.m} available at 
 \includegraphics[scale=0.3]{qn_2_a_hist_9}
 \includegraphics[scale=0.3]{qn_2_a_hist_10}
 
-What these historgrams show is that TODO
+What these historgrams show is the average time the trajectory spends in each bin. The Birkhoff ergodic theorem implies that we can approximate the invariant measure for $ T $ using this histogram. Formally this is done by using indicator functions across each bin and by weighting by the proportion of time that the process spends in each bin.
 
 \subsection{}
 This code is available in \emph{Question\_2\_b\_c\_d.m} available at \url{https://github.com/adamjoshuagray/Honours_Ergodic_Theory/tree/master/Assignment_3}.
@@ -123,14 +123,24 @@ The following is a plot of the left eigenvector corresponding to the eigenvalue 
 \section{}
 \subsection{}
 
-Now note that $ S = h \circ T \circ h^{-1} $ or equivelently $ T = h^{-1} \circ S \circ h $.
+Firstly we see that because $ h $ is a diffeomorphism,
+\begin{align}
+	\mathcal{P}_h f(x) = \frac{f(h^{-1}(x))}{|h'(h^{-1}(x))|}
+\end{align}
+and by the inverse function theorem
+\begin{align}
+	\frac{f(h^{-1}(x))}{|h'(h^{-1}(x))|} = f(h^{-1}(x)) \cdot |(h^{-1}(x)'|
+\end{align}
+which by definition is $ g $. 
+
+Now note that $ S = h \circ T \circ h^{-1} $ or equivalently $ T = h^{-1} \circ S \circ h $.
 
 As $ h $ and $ T $ are non-singular, so is $ S $ and thus by the composition of Perron-Frobenius operators
 we can write
 \begin{align}
     \mathcal{P}_T f = \left( \mathcal{P}_{h^{-1}} \circ \mathcal{P}_{S} \circ \mathcal{P}_{h} \right) f
 \end{align}
-or equivelently
+or equivalently
 \begin{align}
     \left( \mathcal{P}_{h} \circ \mathcal{P}_T \right) f = \left( \mathcal{P}_{S} \circ \mathcal{P}_{h} \right) f..
 \end{align}
@@ -176,13 +186,31 @@ Starting from the definition of $ S $ we can write
 but then using the definition of $ g $ we can further write
 \begin{align}
   \int_I \log|\left( h \circ T \circ h^{-1}(x) \right)'(x)|g(x)d\mu(x) &= \int_I \log|\left( h \circ T \circ h^{-1}(x) \right)'(x)|(f\circ h^{-1})(x) |h^{-1}(x)'|d\mu(x) \\
-  &= 
+  &= \int_I \log|h'(T(h^{-1}(x)))\cdot T'(h^{-1}(x))\cdot h^{-1}(x)'|(f\circ h^{-1})(x) |h^{-1}(x)'|d\mu(x) \\
+  &= \int_{I} \left( \log|h'(T(h^{-1}(x)))| + \log|T'(h^{-1}(x))| + \log|h^{-1}(x)'|\right) f(h^{-1}(x)) |h^{-1}(x)'|d\mu(x)
 \end{align}
-Now let $ y = h^{-1}(x) $ so that $ d\mu(y) = h^{-1}(x)' d\mu(x) $ so we have
+Now let $ y = h(x) $ so we have $ d\mu(y)  = h'(x) d\mu(x) $, that is $d\mu(x) = \frac{1}{h'(x)} d\mu(y) $ and by the inverse function theorem
+$d\mu(x) = h^{-1}(y)' d\mu(y)$ 
+so we have
 \begin{align}
-  \int_{I} \log| \left( h'(T(y))\cdot T'(y) \cdot h \right)'(x) |
+	& \ \ \ \int_{h(I)} \left( -\log|h'(h^{-1}(S(y))| + \log|S'| + \log|h'(h^{-1}(y))| \right)\cdot \frac{h^{-1}(x)'}{|h^{-1}(x)'|}g(y)d\mu(y) \\
+	&= \int_{h(I)} \left( -\log|h'(h^{-1}(S(y))| + \log|S'| + \log|h'(h^{-1}(y))| \right)\cdot \operatorname{sgn}(h^{-1}(x)')g(y)d\mu(y) \\
+	&= \underbrace{\int_{h(I)} \left( -\log|h'(h^{-1}(S(y))|\right)\cdot \operatorname{sgn}(h^{-1}(x)')d\mu_g(y)}_{(1)} + \int_{h(I)} \left( \log|S'|\right)\cdot \operatorname{sgn}(h^{-1}(x)')d\mu_g(y) \\ & \ \ \ + \underbrace{\int_{h(I)} \left( \log|h'(h^{-1}(y))| \right)\cdot \operatorname{sgn}(h^{-1}(x)')d\mu_g(y)}_{(2)} \\
 \end{align}
-
+by recognising the definition of $ g $.
+Now from the previous result we have that $ S $ is $ \mu_g $ invariant and so it follows that $ (1) $ and $ (2) $ just have opposite signs and hence cancel out. This leaves us with 
+\begin{align}
+\int_{h(I)} \left( \log|S'|\right)\cdot \operatorname{sgn}(h^{-1}(x)')d\mu_g(y)
+\end{align}
+Now if $ h $ (and $ h^{-1} $) has positive gradient then  $ h(I) = I $ and so we are left with just
+\begin{align}
+	\int_{I} \log|S(x)| d\mu_g(x).
+\end{align}
+On the other hand if $ h $ has negative gradient then $ h(I) = -I $ in the sense that the direction of integration has changed. This means again we are left with
+\begin{align}
+	\int_{I} \log|S(x)| d\mu_g(x).
+\end{align}
+and so we have the result.
 \section{}
 \subsection{}
 For $ T : I \lra I $ defined as

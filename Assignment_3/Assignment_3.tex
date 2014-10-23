@@ -2,6 +2,7 @@
 \usepackage{unswshortcuts}
 \usepackage{hyperref}
 \usepackage{ dsfont }
+\usepackage{fullpage}
 \begin{document}
 \author{Adam J. Gray}
 \title{Assignment 3}
@@ -145,8 +146,43 @@ A formal statement of that theorem along with it's proof is as follows
 \begin{theorem}
 \end{theorem}
 \begin{proof}
+  Suppose $ \mathcal{P}_{S} g = g $. Then we can say
+  \begin{align}
+    \int_A \mathcal{P}_S g d\mu = \int_A g d\mu.
+  \end{align}
+  Further we can say from the definition of the Perron-Frobenius operator that
+  \begin{align}
+    \int_A \mathcal{P}_{S} f d\mu = \int_{S^{-1}A} g d\mu
+  \end{align}
+  and so
+  \begin{align}
+    \int_A f d\mu = \int_{S^{-1}A} f d\mu
+  \end{align}
+  that is $ g $ is the density of a $ S $ invariant measure defined by
+  \begin{align}
+    \nu(A) = \int_{A} g d\mu.
+  \end{align}
 \end{proof}
 \subsection{}
+We wish to show that 
+\begin{align}
+  \int_I \log|T'(x)|d\mu_f(x) = \int_I \log|S'(x)|d\mu_g(x).
+\end{align}
+Starting from the definition of $ S $ we can write
+\begin{align}
+  \int_I \log|S'(x)|d\mu_g(x) &= \int_I \log|\left( h \circ T \circ h^{-1}(x) \right)'(x)|d\mu_g(x) \\
+    &= \int_I \log|\left( h \circ T \circ h^{-1}(x) \right)'(x)|g(x)d\mu(x)
+\end{align}
+but then using the definition of $ g $ we can further write
+\begin{align}
+  \int_I \log|\left( h \circ T \circ h^{-1}(x) \right)'(x)|g(x)d\mu(x) &= \int_I \log|\left( h \circ T \circ h^{-1}(x) \right)'(x)|(f\circ h^{-1})(x) |h^{-1}(x)'|d\mu(x) \\
+  &= 
+\end{align}
+Now let $ y = h^{-1}(x) $ so that $ d\mu(y) = h^{-1}(x)' d\mu(x) $ so we have
+\begin{align}
+  \int_{I} \log| \left( h'(T(y))\cdot T'(y) \cdot h \right)'(x) |
+\end{align}
+
 \section{}
 \subsection{}
 For $ T : I \lra I $ defined as
